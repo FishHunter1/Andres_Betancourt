@@ -8,17 +8,17 @@
 
     <ImageView
         android:id="@+id/iv_logo_unab"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="144dp"
+        android:layout_height="133dp"
         android:layout_marginStart="146dp"
         android:layout_marginEnd="146dp"
         android:layout_marginBottom="572dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41"
+        app:layout_constraintVertical_bias="0.615"
         app:srcCompat="@drawable/logo" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,7 +27,7 @@
         android:background="@drawable/shape_login"
         android:hapticFeedbackEnabled="false"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="168dp">
+        tools:layout_editor_absoluteY="202dp">
 
         <TextView
             android:id="@+id/textView"
@@ -44,8 +44,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.321"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <EditText
             android:id="@+id/editTextTextPersonName"
@@ -59,8 +61,9 @@
             android:text="  Correo Electronico"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="192dp" />
+            tools:layout_editor_absoluteY="151dp" />
 
         <EditText
             android:id="@+id/editTextTextPersonName2"
@@ -89,13 +92,14 @@
             android:layout_marginBottom="95dp"
             android:background="@drawable/shape_boton"
             android:text="INICIAR SESÍON"
+            android:onClick="clickIniciarSesion"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.555"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-            app:layout_constraintVertical_bias="0.542" />
+            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
