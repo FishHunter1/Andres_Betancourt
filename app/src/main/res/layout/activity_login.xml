@@ -27,7 +27,8 @@
         android:background="@drawable/shape_login"
         android:hapticFeedbackEnabled="false"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="202dp">
+        tools:layout_editor_absoluteY="202dp"
+      tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textView"
@@ -64,7 +65,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="151dp" />
+        tools:layout_editor_absoluteY="151dp"
+        tools:ignore="MissingConstraints" />
 
       <EditText
         android:id="@+id/et_user_contraseña"
@@ -100,7 +102,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.555"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+            app:layout_constraintTop_toBottomOf="@+id/et_user_contraseña"
             app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

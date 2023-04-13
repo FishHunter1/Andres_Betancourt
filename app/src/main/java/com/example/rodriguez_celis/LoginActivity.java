@@ -23,6 +23,13 @@ public class LoginActivity extends AppCompatActivity {
     referenciar();
 
     misPreferencias = getSharedPreferences("Tienda_App",MODE_PRIVATE);
+
+    //VERIFICAR SI ESTA LOGEADO
+    if(misPreferencias.getBoolean("logueado",false)==true){
+      Intent miIntent = new Intent(this,MainActivity.class);
+      startActivity(miIntent);
+      finish();
+    }
   }
   private void referenciar(){
     etUsuario = findViewById(R.id.et_user_login);
@@ -36,6 +43,10 @@ public class LoginActivity extends AppCompatActivity {
     String userUser = etUsuario.getText().toString();
 
     if(PASS.equals(passUser)&&USER.equals(userUser)){
+      SharedPreferences.Editor myEditor = misPreferencias.edit();
+      myEditor.putBoolean("logueado",true);
+      myEditor.apply();
+
       Intent miIntent = new Intent(this,MainActivity.class);
       startActivity(miIntent);
       finish();
