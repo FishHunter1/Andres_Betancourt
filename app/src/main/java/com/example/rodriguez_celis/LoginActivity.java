@@ -1,23 +1,46 @@
 package com.example.rodriguez_celis;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
-public class LoginActivity {
-}
-public void clickIniciarSesion(View view){
+import androidx.appcompat.app.AppCompatActivity;
+
+public class LoginActivity extends AppCompatActivity {
+
+  private EditText etUsuario, etPassword;
+  private SharedPreferences misPreferencias;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState){
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_login);
+
+    referenciar();
+
+    misPreferencias = getSharedPreferences("Tienda_App",MODE_PRIVATE);
+  }
+  private void referenciar(){
+    etUsuario = findViewById(R.id.et_user_login);
+    etPassword = findViewById(R.id.et_user_contraseña);
+  }
+  public void clickIniciarSesion(View view){
     String PASS = "123456";
-    String USER = "andres";
+    String USER = "ANDRES";
 
     String passUser = etPassword.getText().toString();
     String userUser = etUsuario.getText().toString();
 
     if(PASS.equals(passUser)&&USER.equals(userUser)){
-        Intent miIntent= new Intent(this,MainActivity.class);
-        startActivity(miIntent);
-        finish();
+      Intent miIntent = new Intent(this,MainActivity.class);
+      startActivity(miIntent);
+      finish();
     }else{
-        Toast.makeText(this,"CREDENCIALES INCORRECTAS",Toast).show();
+      Toast.makeText(this, "Datos Incorrectos", Toast.LENGTH_SHORT).show();
     }
+  }
 }

@@ -4,4 +4,5 @@
     <string name="txt_listado_productos">Tienda Don Chepe Fortuna</string>
     <string name="txt_detalle">Detalle Producto</string>
     <string name="txt_agregar_producto">Agregar Producto</string>
+    <string name="txt_iniciar_sesion">Iniciar Sesion</string>
 </resources>
